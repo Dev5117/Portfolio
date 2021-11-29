@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+h1, h2, h3, h4, p, a {
+  color: white;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)), url('slider-agency-website-slide-01-bg.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+.navbar{
+  width: 100%;
+  flex-grow: 0;
+  display: block;
+  padding: 15px 0;
+}
+.body{
+ flex-grow: 1;
+ display: grid;
+ place-items: center;
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.navbar .menu li a{
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  padding: 0px 15px;
+}
+.navbar .logo a{
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  font-family: 'DM Serif Display', serif;
+}
+
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+} 
+.navbar .menu ul{
+  display: flex;
+}
+.logo-text:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.logo-text:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.damn:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.damn:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.name{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 50px;
+  font-family: 'Caveat', cursive;
+}
